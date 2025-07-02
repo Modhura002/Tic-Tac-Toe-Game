@@ -13,7 +13,7 @@ const winComb = [
   [2, 4, 6],
 ];
 let playerO = true;
-
+let count=0;
 boxes.forEach((box) => {
   box.addEventListener("click", () => {
     if (box.innerText !== "") return;
@@ -26,8 +26,10 @@ boxes.forEach((box) => {
       box.style.color = "#2782F1";
       playerO = true;
     }
-
+    count++;
+    console.log(count);
     checkWinner();
+    checkDraw();
   });
 });
 
@@ -39,7 +41,6 @@ const checkWinner = () => {
     if (p1 != "" && p2 != "" && p3 != "") {
       if (p1 === p2 && p2 === p3) {
         let winner = p1;
-        console.log(winner + " wins");
         announceWinner(winner);
         disable();
         return;
@@ -58,10 +59,12 @@ const announceWinner = (winner) => {
   win.innerText = "Congratulations! Winner is " + winner;
   win.classList.remove("hide");
 };
+
 resetbtn.addEventListener("click", () => {
   boxes.forEach((box) => {
     box.innerText = "";
     box.disabled = false;
+    count=0;
   });
   playerO = true;
   win.classList.add("hide");
@@ -71,7 +74,17 @@ newbtn.addEventListener("click", () => {
   boxes.forEach((box) => {
     box.innerText = "";
     box.disabled = false;
+    count=0;
   });
   playerO = true;
   win.classList.add("hide");
 });
+
+const checkDraw=()=>{
+    if(count >=9)
+    {
+        win.innerText =  "Its a Draw";
+        win.classList.remove("hide");
+    }
+
+};
