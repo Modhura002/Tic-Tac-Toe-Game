@@ -13,7 +13,7 @@ const winComb = [
   [2, 4, 6],
 ];
 let playerO = true;
-let count=0;
+let count = 0;
 boxes.forEach((box) => {
   box.addEventListener("click", () => {
     if (box.innerText !== "") return;
@@ -64,7 +64,7 @@ resetbtn.addEventListener("click", () => {
   boxes.forEach((box) => {
     box.innerText = "";
     box.disabled = false;
-    count=0;
+    count = 0;
   });
   playerO = true;
   win.classList.add("hide");
@@ -74,17 +74,15 @@ newbtn.addEventListener("click", () => {
   boxes.forEach((box) => {
     box.innerText = "";
     box.disabled = false;
-    count=0;
+    count = 0;
   });
   playerO = true;
   win.classList.add("hide");
 });
 
-const checkDraw=()=>{
-    if(count >=9)
-    {
-        win.innerText =  "Its a Draw";
-        win.classList.remove("hide");
-    }
-
+const checkDraw = () => {
+  if (count >= 9) {
+    win.innerText = "Its a Draw";
+    win.classList.remove("hide");
+  }
 };
