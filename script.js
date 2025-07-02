@@ -11,6 +11,7 @@ boxes.forEach((box)=>{
             return;
         if(playerO){
             box.innerText="O";
+            box.style.color = "rgb(80, 12, 12)";
             playerO=false;
         }
         else{
@@ -64,3 +65,13 @@ const announceWinner=(winner)=>{
     playerO = true;
     win.classList.add("hide");  
 });
+
+newbtn.addEventListener("click", () => {
+    boxes.forEach((box) => {
+        box.innerText = "";
+        box.disabled = false;
+    });
+    playerO = true;
+    win.classList.add("hide");  
+});
+
