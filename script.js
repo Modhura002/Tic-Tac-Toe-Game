@@ -13,7 +13,7 @@ boxes.forEach((box)=>{
             box.innerText="X";
             playerO=true;
         }
-        
+        box.style.pointerEvents="none";
 
     });
 
