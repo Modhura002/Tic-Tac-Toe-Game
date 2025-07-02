@@ -4,13 +4,14 @@
 }
 
 body{
-    height: 100vh;
+    height: 150vh;
     background-color: #061021;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
+    gap : 20px;
     
 }
 h1{
@@ -71,11 +72,11 @@ h1{
 }
 .hide{
     display: none;
+    
 }
 
 #win{
-    width: 200px;
-    height: 200px;
-    font-size: 30px;
+    
+    font-size: 45px;
     font-family: Arial, Helvetica, sans-serif;
 }
