@@ -1,6 +1,7 @@
 let boxes=document.querySelectorAll(".squares");
 let resetbtn=document.querySelector(".reset");
 let newbtn=document.querySelector(".new");
+let win=document.querySelector("#win");
 const winComb=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
 let playerO=true;
 
@@ -50,5 +51,16 @@ const disable=()=>{
 }
 
 const announceWinner=(winner)=>{
+    win.innerText="Congratulations! Winner is "+winner;
+    win.classList.remove("hide");
+
 
 }
+ resetbtn.addEventListener("click", () => {
+    boxes.forEach((box) => {
+        box.innerText = "";
+        box.disabled = false;
+    });
+    playerO = true;
+    win.classList.add("hide");  
+});
