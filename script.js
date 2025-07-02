@@ -11,9 +11,10 @@ boxes.forEach((box)=>{
         }
         else{
             box.innerText="X";
+            box.style.color="#2782F1";
             playerO=true;
         }
-         disable();
+          
         checkWinner();
 
     });
@@ -26,9 +27,11 @@ const checkWinner=()=>{
         let p3=boxes[pos[2]].innerText;
         if(p1!="" && p2!="" && p3!=""){
             if(p1===p2 && p2===p3){
-                disable();
+               
                 let winner=p1;
-                console.log(winner);
+                console.log(winner+" wins");
+                 disable();
+                 return;
 
                 
             }
