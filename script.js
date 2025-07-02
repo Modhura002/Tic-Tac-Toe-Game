@@ -2,3 +2,19 @@ let boxes=document.querySelectorAll(".squares");
 let resetbtn=document.querySelector(".reset");
 let newbtn=document.querySelector(".new");
 let winComb=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+let playerO=true;
+boxes.forEach((box)=>{
+    box.addEventListener("click",()=>{
+        if(playerO){
+            box.innerText="O";
+            playerO=false;
+        }
+        else{
+            box.innerText="X";
+            playerO=true;
+        }
+        
+
+    });
+
+});
