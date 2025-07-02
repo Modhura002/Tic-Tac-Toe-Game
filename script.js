@@ -27,7 +27,6 @@ boxes.forEach((box) => {
       playerO = true;
     }
     count++;
-    console.log(count);
     checkWinner();
     checkDraw();
   });
