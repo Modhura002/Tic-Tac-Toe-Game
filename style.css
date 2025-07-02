@@ -69,3 +69,27 @@ h1{
      
 
 }
+#win {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: rgb(243, 245, 194);
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+
+.hide {
+    display: none;
+}
+
+
+ 
